@@ -1,0 +1,13 @@
+name: DashboardSLR
+title: DashboardSLR
+username: ellavelner
+account: ellavelner
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11040313
+bundleId: 8237434
+url: https://ellavelner.shinyapps.io/DashboardSLR/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: www/DataSLR23.csv
