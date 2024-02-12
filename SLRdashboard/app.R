@@ -155,7 +155,7 @@ ui <- dashboardPage(skin = "purple",
           infoBoxOutput("ibox_speech"),
         ),
         h2("Speech modules were rarely tailored to children"),
-        p("Looking at the speech modules that perform the automatic recognition and generation of speech in the agent, we see little explicit adaptation. Eight studies have explicitly reported an adapted or child-specific recognition module. Surprisingly, this adaptation often happens with broad age groups, while it might be easier to adapt to a narrower age group, since it is more targeted. The big pillar of wizarded interactions make the automatic recognition module often irrelevant. On the synthesis side, adaptation occurs slightly more often (18 studies), but still mostly with broad age groups. Note that often authors do not mention anything ('ns') about possibly adapting these modules, sometimes even completely omitting the speech modules."),
+        p("Looking at the speech modules that perform the automatic recognition and generation of speech in the agent, we see little explicit adaptation. Eight studies have explicitly reported an adapted or child-specific recognition module. Surprisingly, this adaptation often happens with broad age groups, while it might be easier to adapt to a narrower age group, since it is more targeted. The big pillar of wizarded interactions make the automatic recognition module often irrelevant. On the synthesis side, adaptation occurs slightly more often (18 studies), but still mostly with broad age groups. Note that often authors do not mention anything ('Not specified') about possibly adapting these modules, sometimes even completely omitting the speech modules."),
         fluidRow(
           box(plotOutput("asrage", height = 250)),
 
@@ -393,20 +393,20 @@ server <- function(input, output) {
   v <- reactiveValues(plot = NULL)
  
   #change order of axis
-  numberorder <- c('1-10', '11-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '81-90', '91-100', '>100', 'ns')
+  numberorder <- c('1-10', '11-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '81-90', '91-100', '>100', 'Not specified')
   typeorder <- c('Robot', 'Virtual Agent', 'Voice Assistant', 'Smart Speaker')
   domainorder <- c('Education', 'Entertainment', 'Edutainment', 'Healthcare', 'Generic', 'Other')
-  settingorder <- c('home', 'lab', 'online', 'public space', 'school', 'therapy space', 'other', 'ns')
-  ageorder <- c('young', '7-9', '10-12', 'broad', 'ns')
-  agebnorder <- c('narrow', 'broad', 'wide', 'ns')
-  autonorder <- c('Fully autonomous', 'Wizarded', 'Combination', 'ns')
-  asrorder <- c('Yes', 'Partially', 'No', 'Other', 'Wizarded', 'Not relevant', 'ns')
-  typicalorder <- c('ASD', 'speech impairment', 'diabetes', 'TD', 'ns')
-  ttsorder <- c('Yes', 'Partially', 'No', 'Not relevant', 'ns')
+  settingorder <- c('home', 'lab', 'online', 'public space', 'school', 'therapy space', 'other', 'Not specified')
+  ageorder <- c('young', '7-9', '10-12', 'broad', 'Not specified')
+  agebnorder <- c('narrow', 'broad', 'wide', 'Not specified')
+  autonorder <- c('Fully autonomous', 'Wizarded', 'Combination', 'Not specified')
+  asrorder <- c('Yes', 'Partially', 'No', 'Other', 'Wizarded', 'Not relevant', 'Not specified')
+  typicalorder <- c('ASD', 'speech impairment', 'diabetes', 'TD', 'Not specified')
+  ttsorder <- c('Yes', 'Partially', 'No', 'Not relevant', 'Not specified')
   venueorder <- c('CCI', 'robot/agent', 'HCI', 'speech', 'CUI', 'misc')
   regionorder <- c('North America', 'Europe', 'Central Asia', 'East Asia', 'Southeast Asia', 'Oceania', 'Combination')
-  langorder <- c('Dutch', 'English', 'English, Spanish', 'French', 'German', 'Greek', 'Italian', 'Japanese', 'Kazakh, Russian', 'Korean', 'Mandarin', 'Spanish', 'Swedish', 'ns')
-  langengorder <- c('English', 'Other', 'ns')
+  langorder <- c('Dutch', 'English', 'English, Spanish', 'French', 'German', 'Greek', 'Italian', 'Japanese', 'Kazakh, Russian', 'Korean', 'Mandarin', 'Spanish', 'Swedish', 'Not specified')
+  langengorder <- c('English', 'Other', 'Not specified')
   
   #plots
   observeEvent(input$make_plot, {
