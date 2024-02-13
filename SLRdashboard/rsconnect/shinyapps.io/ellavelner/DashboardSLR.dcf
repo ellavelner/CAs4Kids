@@ -5,7 +5,7 @@ account: ellavelner
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11040313
-bundleId: 8245726
+bundleId: 8249816
 url: https://ellavelner.shinyapps.io/DashboardSLR/
 version: 1
 asMultiple: FALSE

@@ -68,7 +68,7 @@ ui <- dashboardPage(skin = "purple",
           infoBoxOutput("ibox_overview"),
         ),
         span("This dashboard shows the results of a systematic literature review on "), strong("conversational agents for children"), span("."), br(),
-        span("It is advised to view this dashboard on a computer screen. Below you find some generic information about the dataset. On the left, you can click to the different topics in the sidebar to check out the results. In 'Exploration' you can also explore the data yourself by plotting your own barchart. You can also find some filters in the sidebar to specify your interest. Plots will change accordingly and at the top of every page is a counter that shows the number of papers currently plotted. The csv file containing the full dataset can be downloaded"), a("here", href="https://ellavelner.nl/slr_data", target="_blank"), span(". For an explanation of the annotations, see "), a("this document", href="https://docs.google.com/document/d/1MAHX8ivwKQDOCPc3QWJvCb3-T46NpzfK_MC1BR91qUc/edit?usp=sharing", target="_blank"), span("."), p(" "),
+        span("It is advised to view this dashboard on a computer screen. Below you find some generic information about the dataset. On the left, you can click to the different topics in the sidebar to check out the results. In 'Exploration' you can also explore the data yourself by plotting your own barchart. You can also find some filters in the sidebar to specify your interest. Plots will change accordingly and at the top of every page is a counter that shows the number of papers currently plotted. The csv file containing the full dataset, the code of this dashboard and the annotation scheme can be downloaded"), a("here", href="https://github.com/ellavelner/CAs4Kids", target="_blank"), span("."), p(" "),
         span("If you have any questions or comments about this dashboard, feel free to reach out via "), a("email", href="mailto:p.c.velner@utwente.nl", target="_blank"), span("."), p(" "),
         fluidRow(
           box(plotOutput("type", height = 250)),
@@ -225,7 +225,7 @@ ui <- dashboardPage(skin = "purple",
         h2("View the dataset"),
         p("Here you can view the data behind the plots. You can filter at the top of each column. (filters in the sidebar don't work for the table)"),
         p(""), 
-        span("The csv file containing the full dataset can be downloaded"), a("here", href="https://ellavelner.nl/slr_data", target="_blank"), span("."),
+        span("The csv file containing the full dataset can be downloaded"), a("here", href="https://github.com/ellavelner/CAs4Kids", target="_blank"), span("."),
         fluidRow(
           column(12,
           dataTableOutput("tableExplore")
@@ -238,8 +238,8 @@ ui <- dashboardPage(skin = "purple",
               column(width=6,
                   fluidRow(
                         box(width=12,
-                        span("In total, 468 papers were collected using the search strings below in the ACM Digital Library and the Scopus database. After screening and selection according to our selection criteria, a total of 81 papers has been annotated and included in this dashboard. For an explanation of the annotations, see "), a("this document", href="https://docs.google.com/document/d/1MAHX8ivwKQDOCPc3QWJvCb3-T46NpzfK_MC1BR91qUc/edit?usp=sharing", target="_blank"), span("."),
-                        span("The csv file containing the full dataset can be downloaded"), a("here", href="https://ellavelner.nl/slr_data", target="_blank"), span(".")
+                        span("In total, 468 papers were collected using the search strings below in the ACM Digital Library and the Scopus database. After screening and selection according to our selection criteria, a total of 81 papers has been annotated and included in this dashboard. For an explanation of the annotations, see "), a("this document", href="https://github.com/ellavelner/CAs4Kids/blob/main/Annotation_scheme.pdf", target="_blank"), span("."),
+                        span("The csv file containing the full dataset can be downloaded"), a("here", href="https://github.com/ellavelner/CAs4Kids/blob/main/data.csv", target="_blank"), span(".")
                         )
                   ),
                   fluidRow(
